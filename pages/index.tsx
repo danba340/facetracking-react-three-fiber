@@ -3,7 +3,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { FacePosition } from '../components/FacePosition'
 import { useState } from 'react'
-import { Box } from '../components/Box'
+import { R3F } from '../components/R3F'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +23,7 @@ export default function Home() {
           console.log("POS", pos)
           setFacePos(pos)
         }} />
-        <Box facePos={facePos} />
+        <R3F facePos={facePos} />
       </main>
     </>
   )
