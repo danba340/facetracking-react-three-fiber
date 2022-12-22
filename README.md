@@ -13,3 +13,9 @@ npm run dev
 # or
 yarn dev
 ```
+
+## Tutorial steps
+- [x] Starting boilerplate
+- [x] FaceTracker Module
+- [ ] FaceTracker Component
+- [ ] 3D Cube in R3F
