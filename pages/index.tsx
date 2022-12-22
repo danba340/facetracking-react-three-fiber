@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import { FacePosition } from '../components/FacePosition'
+import { R3F } from '../components/R3F'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [facePos, setFacePos] = useState([0, 0])
   return (
     <>
       <Head>
@@ -15,7 +19,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        Main
+        <FacePosition onNewFacePosition={(pos) => {
+          setFacePos(pos)
+        }} />
+        <R3F facePos={facePos} />
       </main>
     </>
   )
